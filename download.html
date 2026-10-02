@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdAway 安装文件资源与安装教程（整理版本 6.1.4）</title>
+  <meta name="description" content="AdAway 6.1.4 安装文件资源获取与安装教程：版本与校验值对照表、未知来源安装步骤、装好后选择 hosts / 本地 VPN 运行模式，附漏拦与失效的排查清单。">
+  <meta name="theme-color" content="#0e1014">
+  <link rel="icon" type="image/png" href="assets/img/adaway-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ======================== 导航 ======================== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html" aria-label="返回首页">
+        <img src="assets/img/adaway-logo.png" alt="AdAway 图标">
+        <span class="logo-text">AdAway <em>使用指南</em></span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="index.html#features">功能亮点</a>
+        <a href="index.html#modes">运行模式</a>
+        <a href="index.html#faq">常见问题</a>
+        <a href="download.html">下载与安装</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="#" data-link="download">获取安装文件资源</a>
+      </nav>
+      <button class="nav-burger" aria-label="打开菜单"><span></span></button>
+    </div>
+  </header>
+
+  <!-- ======================== 页头 ======================== -->
+  <section class="page-head">
+    <div class="container">
+      <p class="kicker">Download &amp; Install</p>
+      <h1>安装文件资源与安装教程</h1>
+      <p class="lead">整理版本 6.1.4（Android 8.0 及以上）。下面的对照表用于安装前核对版本与校验值；按钮里的资源整理在夸克网盘，转存后把 APK 传到手机安装即可。</p>
+
+      <!-- 资源卡 -->
+      <div class="dl-card" data-reveal>
+        <div class="dl-card-head">
+          <img src="assets/img/adaway-logo.png" alt="AdAway 图标">
+          <div>
+            <strong>AdAway 安装文件资源</strong>
+            <span>整理版本 6.1.4 · 夸克网盘</span>
+          </div>
+        </div>
+        <dl class="dl-grid">
+          <div class="dl-row"><dt>应用名称</dt><dd>AdAway</dd></div>
+          <div class="dl-row"><dt>整理版本</dt><dd>6.1.4</dd></div>
+          <div class="dl-row"><dt>包名</dt><dd>org.adaway</dd></div>
+          <div class="dl-row"><dt>安装包体积</dt><dd>13.31M</dd></div>
+          <div class="dl-row"><dt>系统要求</dt><dd>Android 8.0 及以上</dd></div>
+          <div class="dl-row"><dt>MD5</dt><dd>A75F8757A5A333323C38FFF317AB272F</dd></div>
+        </dl>
+        <div class="dl-actions">
+          <a class="btn btn-primary btn-lg" href="#" data-link="download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>
+            获取安装文件资源
+          </a>
+          <p class="dl-hint">转存到自己的网盘后下载 APK，再把文件传到手机存储任意位置；安装前建议对照上表的版本与 MD5 核对一遍。更老的设备请留意 4.x 分支（Android 4.1 及以上）的版本说明。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 安装步骤 ======================== -->
+  <section class="section" id="steps">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Steps</p>
+        <h2 class="section-title">四步装好</h2>
+        <p class="section-sub">从下载到开始拦截，全程在手机上完成，不需要电脑配合。</p>
+      </div>
+      <div class="steps">
+        <div class="step" data-reveal>
+          <p class="step-num">STEP 01</p>
+          <h3>获取 APK</h3>
+          <p>用上方按钮转存安装文件资源，下载 13.31M 的安装包，传到手机存储里。</p>
+        </div>
+        <div class="step" data-reveal>
+          <p class="step-num">STEP 02</p>
+          <h3>允许本次安装</h3>
+          <p>点开 APK，按系统弹窗指引允许「来自此来源的应用」；不同厂商的入口名称略有差异。</p>
+        </div>
+        <div class="step" data-reveal>
+          <p class="step-num">STEP 03</p>
+          <h3>完成安装</h3>
+          <p>等安装完成并打开应用；首次进入会先检查并更新规则源。</p>
+        </div>
+        <div class="step" data-reveal>
+          <p class="step-num">STEP 04</p>
+          <h3>选择运行模式</h3>
+          <p>有 root 授予权限走 hosts 模式；没有 root 按提示启用本地 VPN 模式，确认「VPN 连接请求」后开始拦截。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 运行模式 ======================== -->
+  <section class="section" id="modes">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Modes</p>
+        <h2 class="section-title">装好后：两种模式怎么选</h2>
+        <p class="section-sub">两条路径共用同一份规则列表；选错也没关系，随时可以切换。</p>
+      </div>
+      <div class="mode-cards">
+        <div class="mode-card" data-reveal>
+          <h3><span class="tag">HOSTS</span>根权限模式</h3>
+          <ul>
+            <li>需要 root 权限，或用 Magisk Systemless Hosts 模块</li>
+            <li>规则写入系统 hosts 表，由系统解析层直接拦截</li>
+            <li>系统级生效，不占用 VPN 通道</li>
+            <li>用 Magisk 模块可避免改动系统分区</li>
+          </ul>
+        </div>
+        <div class="mode-card" data-reveal>
+          <h3><span class="tag">VPN</span>本地 VPN 模式</h3>
+          <ul>
+            <li>无需 root，非 root 设备的默认选择</li>
+            <li>建立一条仅在本机生效的 VPN，拦下广告出站连接</li>
+            <li>会占用系统唯一的 VPN 通道</li>
+            <li>系统要求常驻通知；省电策略可能中断服务</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mode-note">切换模式或调整清单后，回主界面重新执行一次「应用」；规则来源与更新节奏见<a href="index.html#faq">首页常见问题</a>。</p>
+    </div>
+  </section>
+
+  <!-- ======================== 排查清单 ======================== -->
+  <section class="section" id="pitfalls">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Checklist</p>
+        <h2 class="section-title">装好后先过一遍这几条</h2>
+        <p class="section-sub">拦截失效或漏拦，大多能在这四条里找到原因。</p>
+      </div>
+      <ul class="pitfall-list" data-reveal>
+        <li><b>拦截突然失效</b>：多半是省电策略掐断了本地 VPN 服务——把 AdAway 加入电池与后台保护名单，必要时在最近任务里给它上锁。</li>
+        <li><b>移动流量下漏拦</b>：检查当前接入点（APN）是否配置了代理：设置 → 移动网络 → 接入点名称，把代理字段清空再试。</li>
+        <li><b>和「私人 DNS」打架</b>：系统开着私人 DNS（Private DNS）时，解析会被系统接管，先把它设为关闭再测拦截效果。</li>
+        <li><b>其他 VPN 用不了</b>：本地 VPN 模式占用系统唯一的 VPN 通道；要同时用其他 VPN 或加速器时，先停用拦截，或改用 hosts 模式（需 root）。</li>
+      </ul>
+      <p class="flow-foot">广告没拦住、误拦截某应用、YouTube 类广告拦不干净——这些场景的处理思路整理在<a href="index.html#faq">首页常见问题</a>。</p>
+    </div>
+  </section>
+
+  <!-- ======================== 底部 CTA ======================== -->
+  <section class="section" id="get">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <h2>获取 AdAway 安装文件资源</h2>
+        <p>整理版本 6.1.4 · Android 8.0 及以上 · 包名 org.adaway；转存后安装，装好选择运行模式即可开始拦截。</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="#" data-link="download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>
+            获取安装文件资源
+          </a>
+          <a class="btn btn-ghost btn-lg" href="index.html">返回首页</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 页脚 ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/img/adaway-logo.png" alt="AdAway 图标">
+            <span class="logo-text">AdAway <em>使用指南</em></span>
+          </a>
+          <p>第三方介绍与说明页：整理 AdAway 的功能、安装与配置信息，并提供安装文件资源的获取指引。</p>
+        </div>
+        <div>
+          <h4>页面</h4>
+          <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="download.html">下载与安装</a>
+            <a href="index.html#faq">常见问题</a>
+          </div>
+        </div>
+        <div>
+          <h4>本页章节</h4>
+          <div class="footer-links">
+            <a href="download.html#steps">安装步骤</a>
+            <a href="download.html#modes">运行模式</a>
+            <a href="download.html#pitfalls">排查清单</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>本页面为 AdAway 的第三方介绍与说明页 · 展示素材来自公开资料，版权归原作者所有</span>
+        <span>内容以应用实际行为为准</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/links.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
