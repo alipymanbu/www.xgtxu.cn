@@ -82,6 +82,19 @@
     counters.forEach(function (el) { animateCount(el); });
   }
 
+  /* ---------- 右下角浮动按钮：返回顶部（滚动后出现） ---------- */
+  var toTop = document.querySelector('.fab-top');
+  if (toTop) {
+    var onFabScroll = function () {
+      toTop.classList.toggle('show', window.scrollY > 480);
+    };
+    window.addEventListener('scroll', onFabScroll, { passive: true });
+    onFabScroll();
+    toTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+    });
+  }
+
   /* ---------- FAQ 手风琴 ---------- */
   document.querySelectorAll('.faq-item').forEach(function (item) {
     var q = item.querySelector('.faq-q');

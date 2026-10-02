@@ -279,6 +279,33 @@ table.modes tr:last-child th, table.modes tr:last-child td { border-bottom: 0; }
   display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
   color: var(--muted); font-size: 13px;
 }
+.footer-base a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); transition: color .18s ease, border-color .18s ease; }
+.footer-base a:hover { color: var(--ink); border-color: var(--ink); }
+
+/* ---------- 右下角浮动按钮（返回顶部 + 下载，跟随滚动） ---------- */
+.fab-stack {
+  position: fixed; right: 20px; bottom: 22px; z-index: 55;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.fab {
+  width: 48px; height: 48px; border-radius: 50%; padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line-2); background: rgba(23, 27, 35, .95);
+  color: var(--ink); cursor: pointer;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .45);
+  backdrop-filter: blur(8px);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, opacity .25s ease, visibility .25s ease;
+}
+.fab svg { width: 20px; height: 20px; }
+.fab:hover { transform: translateY(-3px); border-color: var(--ink); }
+.fab-dl { background: var(--red); border-color: transparent; color: #fff; box-shadow: 0 12px 30px rgba(213, 50, 46, .4); }
+.fab-dl:hover { background: var(--red-2); border-color: transparent; }
+.fab-top { opacity: 0; visibility: hidden; transform: translateY(10px); }
+.fab-top.show { opacity: 1; visibility: visible; transform: none; }
+@media (max-width: 680px) {
+  .fab-stack { right: 14px; bottom: 16px; gap: 10px; }
+  .fab { width: 44px; height: 44px; }
+}
 
 /* ---------- 下载页 ---------- */
 .page-head { padding: 148px 0 40px; }
