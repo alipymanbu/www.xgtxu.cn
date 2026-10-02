@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdAway 使用指南：Android 系统级广告拦截的安装与配置说明</title>
+  <meta name="description" content="AdAway 是 Android 平台的开源广告拦截工具：通过 hosts 规则或本地 VPN 把广告与跟踪域名拦截在设备本机。本篇整理安装教程、双模式设置、规则源管理、常见问题，并提供安装文件资源获取指引。">
+  <meta name="theme-color" content="#0e1014">
+  <link rel="icon" type="image/png" href="assets/img/adaway-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ======================== 导航 ======================== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html" aria-label="返回首页">
+        <img src="assets/img/adaway-logo.png" alt="AdAway 图标">
+        <span class="logo-text">AdAway <em>使用指南</em></span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="index.html#features">功能亮点</a>
+        <a href="index.html#modes">运行模式</a>
+        <a href="index.html#shots">界面预览</a>
+        <a href="index.html#flow">工作原理</a>
+        <a href="index.html#faq">常见问题</a>
+        <a href="download.html">下载与安装</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="download.html" data-link="download">获取安装文件资源</a>
+      </nav>
+      <button class="nav-burger" aria-label="打开菜单"><span></span></button>
+    </div>
+  </header>
+
+  <!-- ======================== Hero ======================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy" data-reveal>
+        <p class="hero-badge">开源 · 系统级拦截 · 没有 root 也能用</p>
+        <h1 class="hero-title">装一次，<br><span class="hl">全机广告</span>安静下来</h1>
+        <p class="hero-sub">AdAway 是 Android 平台的开源广告拦截工具：把广告与跟踪域名在本机解析层拦下——应用里的横幅、网页里的弹窗、后台的跟踪请求，规则应用一次，全机一起生效。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="download.html" data-link="download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>
+            获取安装文件资源
+          </a>
+          <a class="btn btn-ghost btn-lg" href="download.html">先看安装说明</a>
+        </div>
+        <p class="hero-note">整理版本 6.1.4 · 包名 org.adaway · Android 8.0 及以上</p>
+        <div class="hero-stats">
+          <div class="hstat"><b><span data-count="2">0</span></b><span>种运行模式</span></div>
+          <div class="hstat"><b><span data-count="3">0</span></b><span>类自定义清单</span></div>
+          <div class="hstat"><b><span data-count="13.31" data-decimals="2" data-suffix="M">0</span></b><span>单包体积</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal>
+        <div class="float-chip fc-1">hosts 模式 · 根权限直写</div>
+        <div class="float-chip fc-2">本地 VPN 模式 · 无需 root</div>
+        <div class="screen-card">
+          <div class="screen-bar"><i></i><i></i><i></i><span>拦截服务 · 运行中</span></div>
+          <div class="screen-body">
+            <p class="mono-row"><span class="tag-block">BLOCK</span><b>0.0.0.0</b>&nbsp;&nbsp;ads.example.com</p>
+            <p class="mono-row"><span class="tag-block">BLOCK</span><b>0.0.0.0</b>&nbsp;&nbsp;track.example.net</p>
+            <p class="mono-row"><span class="tag-block">BLOCK</span><b>0.0.0.0</b>&nbsp;&nbsp;banner.example.org</p>
+            <p class="screen-status"><span class="dot"></span>规则已应用 · 全机生效中</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 功能亮点 ======================== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Features</p>
+        <h2 class="section-title">为什么用 AdAway 做全机拦截</h2>
+        <p class="section-sub">它不接管某一个应用，而是在系统解析层动手：一次应用规则，整个设备上的广告与跟踪请求一起被拦下。</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card" data-reveal>
+          <p class="feature-num">01</p>
+          <h3>系统级拦截</h3>
+          <p>规则在系统解析层生效：装好并应用一次，应用内的横幅、网页弹窗、后台跟踪请求一起拦下，不挑应用也不挑浏览器。</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <p class="feature-num">02</p>
+          <h3>双运行模式</h3>
+          <p>有 root 走 hosts 模式直接生效；没有 root 用本地 VPN 模式，同样覆盖全机。装好后按设备情况选一条即可。</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <p class="feature-num">03</p>
+          <h3>规则源自由组合</h3>
+          <p>内置一条常用规则源，也可以按需添加、替换第三方 hosts 源——拦多拦少，由规则列表决定。</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <p class="feature-num">04</p>
+          <h3>三类自定义清单</h3>
+          <p>允许列表放行被误拦的域名，阻止列表补上漏网之鱼，重定向规则留给进阶场景；改完重新应用一次即生效。</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <p class="feature-num">05</p>
+          <h3>开源可审计</h3>
+          <p>GPLv3+ 许可，代码公开可查；应用没有账号体系，不需要注册登录，拦截只发生在设备本机。</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <p class="feature-num">06</p>
+          <h3>轻量低占用</h3>
+          <p>安装包 13.31M；hosts 模式把规则交给系统解析层，常驻开销很小，本地 VPN 模式的开销同样有限。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 运行模式 ======================== -->
+  <section class="section" id="modes">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Modes</p>
+        <h2 class="section-title">两种运行模式，按设备情况选</h2>
+        <p class="section-sub">两条路径用的是同一份规则列表，拦截效果接近；差别主要在系统权限、通道占用与适用人群。</p>
+      </div>
+      <div class="table-wrap" data-reveal>
+        <table class="modes">
+          <thead>
+            <tr><th scope="col">对比项</th><th scope="col">hosts 模式</th><th scope="col">本地 VPN 模式</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">前提</th><td>root 权限，或使用 Magisk Systemless Hosts</td><td>无需 root</td></tr>
+            <tr><th scope="row">拦截方式</th><td>规则写入系统 hosts 表，由系统解析层拦截</td><td>建立仅在本机生效的 VPN，断开广告连接</td></tr>
+            <tr><th scope="row">通道占用</th><td>不占 VPN 通道</td><td>占用系统唯一的 VPN 通道</td></tr>
+            <tr><th scope="row">备注</th><td>用 Magisk 模块可避免改动系统分区</td><td>系统要求常驻通知，省电策略可能中断服务</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="modes-note">不确定选哪条？没有 root 就从本地 VPN 模式开始；之后想换成 hosts 模式，切换后回主界面重新应用一次规则即可。具体步骤见<a href="download.html">安装说明</a>。</p>
+    </div>
+  </section>
+
+  <!-- ======================== 界面预览 ======================== -->
+  <section class="section" id="shots">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Screens</p>
+        <h2 class="section-title">界面预览</h2>
+        <p class="section-sub">主界面看拦截状态与规则源，偏好设置里管理运行方式、清单与本地 Web 服务。</p>
+      </div>
+      <div class="shots-track">
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/screenshot-main.png" alt="主界面：拦截计数与规则源状态" loading="lazy"></div>
+          <figcaption>主界面：已拦截 / 已放行计数与规则源更新状态</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/screenshot-prefs.png" alt="偏好设置：运行方式与自动更新" loading="lazy"></div>
+          <figcaption>偏好设置：切换 hosts / 本地 VPN 运行方式</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/screenshot-root.png" alt="hosts 模式选项：重定向与本地 Web 服务" loading="lazy"></div>
+          <figcaption>hosts 模式选项：重定向规则与本地 Web 服务</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/screenshot-help.png" alt="帮助页面：工作原理与常见问题" loading="lazy"></div>
+          <figcaption>帮助页面：工作原理说明与常见问题</figcaption>
+        </figure>
+      </div>
+      <p class="shots-note">截图来自项目公开资料，不同版本界面略有差异，以设备上实际安装的版本为准；展示素材版权归原作者所有。</p>
+    </div>
+  </section>
+
+  <!-- ======================== 工作原理 ======================== -->
+  <section class="section" id="flow">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="kicker">How it works</p>
+        <h2 class="section-title">它是怎么工作的</h2>
+        <p class="section-sub">四步走：拉规则、合清单、应用生效、全机拦截——整个过程都在设备本机完成。</p>
+      </div>
+      <div class="flow-grid">
+        <div class="flow-step" data-reveal>
+          <p class="flow-num">STEP 01</p>
+          <h3>拉取规则源</h3>
+          <p>从选定的 hosts 源下载最新规则列表，默认已内置一条常用源。</p>
+        </div>
+        <div class="flow-step" data-reveal>
+          <p class="flow-num">STEP 02</p>
+          <h3>合并去重</h3>
+          <p>把多份源的条目合并成一份拦截表，重复域名自动去掉。</p>
+        </div>
+        <div class="flow-step" data-reveal>
+          <p class="flow-num">STEP 03</p>
+          <h3>应用生效</h3>
+          <p>hosts 模式写入系统 hosts 表；本地 VPN 模式由应用接管过滤出站连接。</p>
+        </div>
+        <div class="flow-step" data-reveal>
+          <p class="flow-num">STEP 04</p>
+          <h3>全机拦截</h3>
+          <p>应用、浏览器与系统组件的广告、跟踪请求在解析阶段被拦下。</p>
+        </div>
+      </div>
+      <p class="flow-foot">边界说明：域名独立的广告最适合拦截；广告与内容同域的投放（如部分视频平台、社交信息流），任何 hosts 类工具都有天然边界，详见<a href="index.html#faq">常见问题</a>。</p>
+    </div>
+  </section>
+
+  <!-- ======================== 基础信息 ======================== -->
+  <section class="facts" aria-label="基础信息">
+    <div class="container">
+      <dl class="facts-grid">
+        <div class="fact"><dt>版本</dt><dd>6.1.4</dd></div>
+        <div class="fact"><dt>包名</dt><dd>org.adaway</dd></div>
+        <div class="fact"><dt>体积</dt><dd>13.31M</dd></div>
+        <div class="fact"><dt>系统要求</dt><dd>Android 8.0+</dd></div>
+        <div class="fact"><dt>授权</dt><dd>GPLv3+</dd></div>
+        <div class="fact"><dt>获取方式</dt><dd>夸克网盘</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ======================== 常见问题 ======================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="kicker">FAQ</p>
+        <h2 class="section-title">常见问题</h2>
+        <p class="section-sub">关于权限、拦截效果、耗电与更新的高频疑问，先在这里对号。</p>
+      </div>
+      <div class="faq-list" data-reveal>
+        <div class="faq-item">
+          <button class="faq-q" type="button">没有 root 权限，还能用吗？</button>
+          <div class="faq-a"><p>能。6.x 上非 root 设备默认走本地 VPN 模式：授权一条仅在本机生效的 VPN 后即可全机拦截。代价是会占用系统唯一的 VPN 通道，且系统会要求一条常驻通知。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">规则应用了，广告还在，从哪里查？</button>
+          <div class="faq-a"><p>先确认规则是否已应用、应用有没有被省电策略杀掉；系统开着「私人 DNS」的话先关闭再试。移动流量下漏拦，检查接入点（APN）是否配置了代理；Chrome 里漏拦则留意数据压缩代理——这几类是「拦不住」的常见原因。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">YouTube、信息流里的广告能拦住吗？</button>
+          <div class="faq-a"><p>拦不干净。这类投放把广告和内容放在同一批域名下，hosts 拦截只能对独立的广告域名生效，属于方法本身的边界；把 youtube.com 这类主域直接塞进阻止列表，会导致相关应用整体不可用，不建议这样做。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">会不会很耗电、占内存？</button>
+          <div class="faq-a"><p>hosts 模式把规则交给系统解析层，几乎不增加常驻开销；本地 VPN 模式需要保持一条本机 VPN 服务运行，开销同样有限，但会影响「同时只用一条 VPN」的使用习惯。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">规则多久更新一次？</button>
+          <div class="faq-a"><p>广告域名一直在变，建议每一两周在主界面执行一次「下载并应用」。规则更新与安装包升级是两回事：前者在应用内完成，后者等新版发布后替换安装文件即可。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">安装文件从哪里获取？</button>
+          <div class="faq-a"><p>安装文件资源整理在夸克网盘，入口在本页按钮与<a href="download.html">下载页</a>里，转存后把 APK 传到手机安装即可；下载页附有版本与校验值对照表，安装前可以核对一遍。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 底部 CTA ======================== -->
+  <section class="section" id="get">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <h2>获取 AdAway 安装文件资源</h2>
+        <p>整理版本 6.1.4，适用于 Android 8.0 及以上设备；转存后安装，装好选择运行模式即可开始拦截。</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="download.html" data-link="download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>
+            获取安装文件资源
+          </a>
+          <a class="btn btn-ghost btn-lg" href="download.html">查看安装与配置说明</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 页脚 ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/img/adaway-logo.png" alt="AdAway 图标">
+            <span class="logo-text">AdAway <em>使用指南</em></span>
+          </a>
+          <p>第三方介绍与说明页：整理 AdAway 的功能、安装与配置信息，并提供安装文件资源的获取指引。</p>
+        </div>
+        <div>
+          <h4>页面</h4>
+          <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="download.html">下载与安装</a>
+            <a href="index.html#faq">常见问题</a>
+          </div>
+        </div>
+        <div>
+          <h4>相关章节</h4>
+          <div class="footer-links">
+            <a href="index.html#modes">运行模式对比</a>
+            <a href="index.html#flow">工作原理</a>
+            <a href="index.html#shots">界面预览</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>本页面为 AdAway 的第三方介绍与说明页 · 展示素材来自公开资料，版权归原作者所有</span>
+        <span>内容以应用实际行为为准</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/links.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
