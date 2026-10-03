@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>装 AdAway 6.1.4：文件校验、安装步骤与运行模式选择</title>
-  <meta name="description" content="AdAway 6.1.4 安装文件资源获取与安装教程：版本与校验值对照表、未知来源安装步骤、装好后选择 hosts / 本地 VPN 运行模式，附漏拦与失效的排查清单。">
+  <title>AdAway 下载与安装：从网盘拿到 APK，装到手机一步步走</title>
+  <meta name="description" content="AdAway 下载与安装教程：在夸克网盘转存安装包并下载到手机，按步骤允许未知来源、完成安装并打开；附安装被系统拦住等常见问题的处理办法。">
   <meta name="theme-color" content="#0e1014">
   <link rel="icon" type="image/png" href="assets/img/adaway-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,36 +34,28 @@
     </div>
   </header>
 
-  <!-- ======================== 页头 ======================== -->
+  <!-- ======================== 页头：下载入口 ======================== -->
   <section class="page-head">
     <div class="container">
       <p class="kicker">Download &amp; Install</p>
-      <h1>安装文件资源与安装教程</h1>
-      <p class="lead">整理版本 6.1.4（Android 8.0 及以上）。下面的对照表用于安装前核对版本与校验值；按钮里的资源整理在夸克网盘，转存后把 APK 传到手机安装即可。</p>
+      <h1>下载 AdAway，装到手机上</h1>
+      <p class="lead">安装文件资源整理在夸克网盘：转存到自己的账号后下载 APK，再按下面的步骤装到手机。全程在手机端完成，不需要电脑配合。</p>
 
-      <!-- 资源卡 -->
+      <!-- 下载入口卡 -->
       <div class="dl-card" data-reveal>
         <div class="dl-card-head">
           <img src="assets/img/adaway-logo.png" alt="AdAway 图标">
           <div>
             <strong>AdAway 安装文件资源</strong>
-            <span>整理版本 6.1.4 · 夸克网盘</span>
+            <span>整理版本 6.1.4 · Android 8.0 及以上 · 约 13.3 MB</span>
           </div>
         </div>
-        <dl class="dl-grid">
-          <div class="dl-row"><dt>应用名称</dt><dd>AdAway</dd></div>
-          <div class="dl-row"><dt>整理版本</dt><dd>6.1.4</dd></div>
-          <div class="dl-row"><dt>包名</dt><dd>org.adaway</dd></div>
-          <div class="dl-row"><dt>安装包体积</dt><dd>13.31M</dd></div>
-          <div class="dl-row"><dt>系统要求</dt><dd>Android 8.0 及以上</dd></div>
-          <div class="dl-row"><dt>MD5</dt><dd>A75F8757A5A333323C38FFF317AB272F</dd></div>
-        </dl>
         <div class="dl-actions">
           <a class="btn btn-primary btn-lg" href="#" data-link="download">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>
-            获取安装文件资源
+            下载安装包
           </a>
-          <p class="dl-hint">转存到自己的网盘后下载 APK，再把文件传到手机存储任意位置；安装前建议对照上表的版本与 MD5 核对一遍。更老的设备请留意 4.x 分支（Android 4.1 及以上）的版本说明。</p>
+          <p class="dl-hint">点按钮打开网盘分享页，登录后先「转存」到自己网盘，再把安装包下载到手机；下面四步就是装好它的全过程。</p>
         </div>
       </div>
     </div>
@@ -74,98 +66,54 @@
     <div class="container">
       <div class="section-head" data-reveal>
         <p class="kicker">Steps</p>
-        <h2 class="section-title">四步装好</h2>
-        <p class="section-sub">从下载到开始拦截，全程在手机上完成，不需要电脑配合。</p>
+        <h2 class="section-title">四步装到手机上</h2>
+        <p class="section-sub">从转存下载到打开应用，全程在手机上完成。</p>
       </div>
       <div class="steps">
         <div class="step" data-reveal>
           <p class="step-num">STEP 01</p>
-          <h3>获取 APK</h3>
-          <p>用上方按钮转存安装文件资源，下载 13.31M 的安装包，传到手机存储里。</p>
+          <h3>转存并下载</h3>
+          <p>点上方按钮打开网盘分享页，登录后把安装包转存到自己的网盘，再下载到手机存储。</p>
         </div>
         <div class="step" data-reveal>
           <p class="step-num">STEP 02</p>
-          <h3>允许本次安装</h3>
-          <p>点开 APK，按系统弹窗指引允许「来自此来源的应用」；不同厂商的入口名称略有差异。</p>
+          <h3>点开安装包</h3>
+          <p>在文件管理器的下载目录（或夸克 App 的下载列表）里找到刚下好的 APK，点开它。</p>
         </div>
         <div class="step" data-reveal>
           <p class="step-num">STEP 03</p>
-          <h3>完成安装</h3>
-          <p>等安装完成并打开应用；首次进入会先检查并更新规则源。</p>
+          <h3>允许本次安装</h3>
+          <p>系统提示「禁止安装未知来源应用」时选择仍要安装，并在设置里允许夸克（或文件管理器）安装应用。</p>
         </div>
         <div class="step" data-reveal>
           <p class="step-num">STEP 04</p>
-          <h3>选择运行模式</h3>
-          <p>有 root 授予权限走 hosts 模式；没有 root 按提示启用本地 VPN 模式，确认「VPN 连接请求」后开始拦截。</p>
+          <h3>装好并打开</h3>
+          <p>等安装完成，打开 AdAway；首次进入会先检查并更新一次规则源。</p>
         </div>
+      </div>
+      <div class="dl-actions" data-reveal>
+        <a class="btn btn-primary btn-lg" href="#" data-link="download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>
+          下载安装包
+        </a>
+        <p class="dl-hint">还没拿到安装包？点这里回网盘转存下载，再从第一步开始装。</p>
       </div>
     </div>
   </section>
 
-  <!-- ======================== 运行模式 ======================== -->
-  <section class="section" id="modes">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <p class="kicker">Modes</p>
-        <h2 class="section-title">装好后：两种模式怎么选</h2>
-        <p class="section-sub">两条路径共用同一份规则列表；选错也没关系，随时可以切换。</p>
-      </div>
-      <div class="mode-cards">
-        <div class="mode-card" data-reveal>
-          <h3><span class="tag">HOSTS</span>根权限模式</h3>
-          <ul>
-            <li>需要 root 权限，或用 Magisk Systemless Hosts 模块</li>
-            <li>规则写入系统 hosts 表，由系统解析层直接拦截</li>
-            <li>系统级生效，不占用 VPN 通道</li>
-            <li>用 Magisk 模块可避免改动系统分区</li>
-          </ul>
-        </div>
-        <div class="mode-card" data-reveal>
-          <h3><span class="tag">VPN</span>本地 VPN 模式</h3>
-          <ul>
-            <li>无需 root，非 root 设备的默认选择</li>
-            <li>建立一条仅在本机生效的 VPN，拦下广告出站连接</li>
-            <li>会占用系统唯一的 VPN 通道</li>
-            <li>系统要求常驻通知；省电策略可能中断服务</li>
-          </ul>
-        </div>
-      </div>
-      <p class="mode-note">切换模式或调整清单后，回主界面重新执行一次「应用」；规则来源与更新节奏见<a href="index.html#faq">首页常见问题</a>。</p>
-    </div>
-  </section>
-
-  <!-- ======================== 排查清单 ======================== -->
+  <!-- ======================== 常见安装问题 ======================== -->
   <section class="section" id="pitfalls">
     <div class="container">
       <div class="section-head" data-reveal>
-        <p class="kicker">Checklist</p>
-        <h2 class="section-title">装好后先过一遍这几条</h2>
-        <p class="section-sub">拦截失效或漏拦，大多能在这四条里找到原因。</p>
+        <p class="kicker">Install Issues</p>
+        <h2 class="section-title">安装常遇到的三个问题</h2>
+        <p class="section-sub">安装这一步最容易卡住的地方，基本都在下面。</p>
       </div>
       <ul class="pitfall-list" data-reveal>
-        <li><b>拦截突然失效</b>：多半是省电策略掐断了本地 VPN 服务——把 AdAway 加入电池与后台保护名单，必要时在最近任务里给它上锁。</li>
-        <li><b>移动流量下漏拦</b>：检查当前接入点（APN）是否配置了代理：设置 → 移动网络 → 接入点名称，把代理字段清空再试。</li>
-        <li><b>和「私人 DNS」打架</b>：系统开着私人 DNS（Private DNS）时，解析会被系统接管，先把它设为关闭再测拦截效果。</li>
-        <li><b>其他 VPN 用不了</b>：本地 VPN 模式占用系统唯一的 VPN 通道；要同时用其他 VPN 或加速器时，先停用拦截，或改用 hosts 模式（需 root）。</li>
+        <li><b>提示「禁止安装未知来源应用」</b>：这是系统的默认保护，不是安装包有问题。在弹窗里选「仍要安装」；找不到入口时，去 设置 → 应用 → 特殊应用权限 → 安装未知应用，允许你用来打开 APK 的那个应用（夸克或文件管理器）。</li>
+        <li><b>提示「安装包解析失败」</b>：多半是没下完整或传输中断，回网盘重新下载一次再装。</li>
+        <li><b>提示「与已安装应用冲突」</b>：手机里已有签名不同的旧版本，先卸载旧版再装这一版。</li>
       </ul>
-      <p class="flow-foot">广告没拦住、误拦截某应用、YouTube 类广告拦不干净——这些场景的处理思路整理在<a href="index.html#faq">首页常见问题</a>。</p>
-    </div>
-  </section>
-
-  <!-- ======================== 底部 CTA ======================== -->
-  <section class="section" id="get">
-    <div class="container">
-      <div class="cta-band" data-reveal>
-        <h2>获取 AdAway 安装文件资源</h2>
-        <p>整理版本 6.1.4 · Android 8.0 及以上 · 包名 org.adaway；转存后安装，装好选择运行模式即可开始拦截。</p>
-        <div class="cta-actions">
-          <a class="btn btn-primary btn-lg" href="#" data-link="download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>
-            获取安装文件资源
-          </a>
-          <a class="btn btn-ghost btn-lg" href="index.html">返回首页</a>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -192,8 +140,7 @@
           <h4>本页章节</h4>
           <div class="footer-links">
             <a href="download.html#steps">安装步骤</a>
-            <a href="download.html#modes">运行模式</a>
-            <a href="download.html#pitfalls">排查清单</a>
+            <a href="download.html#pitfalls">安装问题</a>
           </div>
         </div>
       </div>
